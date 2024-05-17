@@ -1,0 +1,75 @@
+
+.container-1 {
+  display: flex;
+  grid-template-columns: repeat(4, 3fr); /* Each box occupies 4 grid columns initially */
+  gap: 20px;
+}
+
+
+@media (max-width: 800px) {
+  .container-1 {
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row when the screen width is less than 800px */
+  }
+}
+
+
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  margin:10px;
+}
+
+.resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff84;
+}
+
+.resizable-handle.n {
+  top: -5px;
+  left: 50%;
+  transform: translateX(50%);
+}
+
+.resizable-handle.w {
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+}
+
+.resizable-handle.e {
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+}
+
+.resizable-handle.s {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(50%);
+}
+
+.resizable-handle.sw {
+  bottom: -5px;
+  left: -5px;
+}
+
+.resizable-handle.nw {
+  top: -5px;
+  left: -5px;
+}
+
+.resizable-handle.se {
+  bottom: -5px;
+  right: -5px;
+}
+
+.resizable-handle.ne {
+  top: -5px;
+  right: -5px;
+}
